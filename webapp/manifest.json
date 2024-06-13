@@ -37,7 +37,7 @@
 				}
 			]
 		},
-		
+
 		"dependencies": {
 			"minUI5Version": "1.124.0",
 			"libs": {
@@ -59,6 +59,10 @@
 				"settings": {
 					"bundleName": "za.co.fuad.i18n.i18n"
 				}
+			},
+			"invoice": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/localInvoices.json"
 			}
 		},
 

@@ -13,6 +13,7 @@
 		id="page">
 		<content>
 			<mvc:XMLView viewName="za.co.fuad.view.HelloPanel"/>
+			<mvc:XMLView viewName="za.co.fuad.view.InvoiceList"/>
 		</content>
 	</Page>
 

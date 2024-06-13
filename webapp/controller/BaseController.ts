@@ -6,11 +6,15 @@ import ResourceModel from "sap/ui/model/resource/ResourceModel";
 import ResourceBundle from "sap/base/i18n/ResourceBundle";
 import Router from "sap/ui/core/routing/Router";
 import History from "sap/ui/core/routing/History";
+import Dialog from "sap/m/Dialog";
 
 /**
  * @namespace za.co.fuad.controller
  */
 export default abstract class BaseController extends Controller {
+
+	dialog: Dialog;
+
 	/**
 	 * Convenience method for accessing the component of the controller's view.
 	 * @returns The component of the controller's view
@@ -79,5 +83,16 @@ export default abstract class BaseController extends Controller {
 		} else {
 			this.getRouter().navTo("main", {}, undefined, true);
 		}
+	}
+
+	async onOpenDialog(): Promise<void> {
+        this.dialog ??= await <Promise<Dialog>> this.loadFragment({
+            name: "za.co.fuad.view.HelloDialog"    
+        })
+        this.dialog.open();
+    }
+
+	onCloseDialog(): void {
+		(this.byId("HelloDialog") as Dialog)?.close();
 	}
 }
