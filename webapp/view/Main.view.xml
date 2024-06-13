@@ -12,14 +12,7 @@
 		title="{i18n>appTitle}"
 		id="page">
 		<content>
-			<Button
-				text="{i18n>showHelloButtonText}"
-				press=".sayHello"/>
-			<Input
-				value="{/recipient/name}"
-				description="Hello {/recipient/name}"
-				valueLiveUpdate="true"
-				width="60%" />
+			<mvc:XMLView viewName="za.co.fuad.view.HelloPanel"/>
 		</content>
 	</Page>
 

@@ -23,7 +23,7 @@ export default class Main extends BaseController {
 
 	public sayHello(): void {
 		// read message from the i18n model
-		const recipient = (this.getView().getModel() as JSONModel)?.getProperty("/recipient/name");
+		const recipient = (this.getView().getModel() as JSONModel)?.getProperty("/recipient/name") as string;
 		const resourceBundle = this.getResourceBundle() as ResourceBundle;
 		const msg = resourceBundle.getText("helloMsg", [recipient]) || "no text defined";
 		MessageBox.show(msg);
