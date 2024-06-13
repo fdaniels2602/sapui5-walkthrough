@@ -12,18 +12,14 @@
 		title="{i18n>appTitle}"
 		id="page">
 		<content>
-			<IllustratedMessage
-				title="{i18n>appTitle}"
-				illustrationType="sapIllus-SuccessHighFive"
-				enableVerticalResponsiveness="true"
-				description="{i18n>appDescription}">
-				<additionalContent>
-					<Button
-						id="helloButton"
-						text="{formatter: 'formatter.formatValue', path: 'i18n>btnText'}"
-						press="sayHello" />
-				</additionalContent>
-			</IllustratedMessage>
+			<Button
+				text="{i18n>showHelloButtonText}"
+				press=".sayHello"/>
+			<Input
+				value="{/recipient/name}"
+				description="Hello {/recipient/name}"
+				valueLiveUpdate="true"
+				width="60%" />
 		</content>
 	</Page>
 
