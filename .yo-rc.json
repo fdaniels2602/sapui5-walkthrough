@@ -1,0 +1,19 @@
+{
+  "generator-ui5-ts-app": {
+    "namespace": "za.co.fuad",
+    "framework": "SAPUI5",
+    "frameworkVersion": "1.124.0",
+    "author": "Fuad",
+    "initrepo": true,
+    "tstypes": "@sapui5/types",
+    "tstypesVersion": "1.124.0",
+    "appId": "za.co.fuad",
+    "appURI": "za/co/fuad",
+    "cdnDomain": "ui5.sap.com",
+    "defaultTheme": "sap_horizon",
+    "gte1_98_0": true,
+    "gte1_104_0": true,
+    "gte1_115_0": true,
+    "setupCompleted": true
+  }
+}
