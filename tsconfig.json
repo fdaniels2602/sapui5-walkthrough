@@ -11,7 +11,7 @@
 		"rootDir": "./webapp",
 		"types": ["@sapui5/types", "@types/qunit"],
 		"paths": {
-			"za/co/fuad/*": ["./webapp/*"],
+			"za/co/fuad/*": ["./webapp/*", "./webapp/test/*"],
 			"unit/*": ["./webapp/test/unit/*"],
 			"integration/*": ["./webapp/test/integration/*"]
 		}
