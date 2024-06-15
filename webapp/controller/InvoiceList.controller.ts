@@ -5,6 +5,8 @@ import Filter from "sap/ui/model/Filter";
 import FilterOperator from "sap/ui/model/FilterOperator";
 import ListBinding from "sap/ui/model/ListBinding";
 import formatter from "../model/formatter";
+import Event from "sap/ui/base/Event";
+import ObjectListItem from "sap/m/ObjectListItem";
 
 /**
  * @namespace ui5.walkthrough.controller
@@ -35,5 +37,13 @@ export default class App extends BaseController {
         const list = this.byId("InvoiceList");
         const binding = list?.getBinding("items") as ListBinding;
         binding ?.filter(filter);
+    }
+
+    onPress(event: Event): void {
+        const item = event.getSource();
+        const router = this.getOwnerComponent().getRouter();
+        router.navTo("detail", {
+            invoicePath: window.encodeURIComponent(item.getBindingContext("invoice").getPath().substr(1))
+        });
     }
 }

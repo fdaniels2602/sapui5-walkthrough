@@ -1,0 +1,12 @@
+<mvc:View
+    controllerName="za.co.fuad.controller.App"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true">
+    <Page title="{i18n>homePageTitle}">
+        <content>
+            <mvc:XMLView viewName="za.co.fuad.view.HelloPanel" />
+            <mvc:XMLView viewName="za.co.fuad.view.InvoiceList" />
+        </content>
+    </Page>
+</mvc:View>
