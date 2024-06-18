@@ -7,7 +7,37 @@
         showNavButton="true"
 		navButtonPress=".onNavBack">
 		<ObjectHeader 
+			responsive="true"
+            fullScreenOptimized="true"
+            number="{
+                parts: [
+                    'invoice>ExtendedPrice',
+                    'view>/currency'
+                ],
+                type: 'sap.ui.model.type.Currency',
+                formatOptions: {
+                    showMeasure: false
+                }
+            }"
             intro="{invoice>ShipperName}"
-            title="{invoice>ProductName}"/>
+            title="{invoice>ProductName}">
+			<attributes>
+                <ObjectAttribute
+                    title="{i18n>quantityTitle}"
+                    text="{invoice>Quantity}"/>
+                <ObjectAttribute
+                    title="{i18n>dateTitle}"
+                    text="{
+                        path: 'invoice>ShippedDate',
+                        type: 'sap.ui.model.type.Date',
+                        formatOptions: {
+                            style: 'long',
+                            source: {
+                            pattern: 'yyyy-MM-ddTHH:mm:ss'
+                            }
+                        }
+                    }"/>
+            </attributes>
+		</ObjectHeader>
 	</Page>
 </mvc:View>
